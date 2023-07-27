@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Employee List</h1>
+
+<table class="table">
+    <thead>
+    <td>
+        <button type="button" class="btn btn-primary">Create</button>
+
+    </td>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+        <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Position</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in ViewBag.Employees)
+        {
+        <tr>
+                <th scope="row">@employee.EmployeeId</th>
+                <th scope="row">@employee.FirstName</th>
+                <th scope="row">@employee.LastName</th>
+                <th scope="row">@employee.Age</th>
+                <th scope="row">@employee.Gender</th>
+                <th scope="row">@employee.Position</th>
+            <td>
+                <button type="button" class="btn btn-success">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>
